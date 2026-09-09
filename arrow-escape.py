@@ -121,7 +121,7 @@ def configure_settings(view, webkit) -> None:
     try:
         settings.set_user_agent_with_application_details(
             "ArrowEscape",
-            "4.2.5",
+            "4.2.6",
         )
     except Exception:
         pass
