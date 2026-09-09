@@ -27,4 +27,4 @@ modules:
       - type: git
         url: https://github.com/baniyamaniteja/ArrowEscape.git
         tag: v4.2.6
-        commit: 8a25cf574e34b750b51b70a227893aab60cf9440
+        commit: 462264e8b2991b1db3acadc7e92d773a20f72dfc
