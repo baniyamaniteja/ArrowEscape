@@ -21,19 +21,17 @@ jobs:
 
       - name: Add Flathub repository
         run: |
-          flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+          flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
       - name: Install GNOME 50 SDK
         run: |
-          flatpak install -y flathub org.gnome.Sdk//50
+          flatpak install --user -y flathub org.gnome.Sdk//50
 
       - name: Build Flatpak
         run: |
-          flatpak-builder --force-clean --disable-rofiles-fuse build io.github.baniyamaniteja.ArrowEscape.yml
-
-      - name: Build bundle
-        run: |
-          flatpak build-bundle \
-            flathub \
-            ArrowEscape.flatpak \
-            io.github.baniyamaniteja.ArrowEscape
+          flatpak-builder \
+            --user \
+            --force-clean \
+            --disable-rofiles-fuse \
+            build \
+            io.github.baniyamaniteja.ArrowEscape.yml
