@@ -1,45 +1,79 @@
-Arrow Escape 4.2.5 for Ubuntu / Linux
-=====================================
+# Arrow Escape
 
-Silhouette arrow-exit puzzle. Same campaign, daily challenge, and calendar
-as the Android and Windows builds.
+**Arrow Escape** is a brain-training logic puzzle game where you must plan your moves, follow the arrow directions, and clear the puzzle board.
 
-Install (this user, no sudo)
-----------------------------
-1. Unzip ArrowEscape-linux.zip
-2. Open a terminal in the unzipped folder
-3. Run:
+## Game
 
-     chmod +x install.sh
-     ./install.sh
+Think carefully, plan ahead, and find the correct sequence of moves to solve each puzzle.
 
-The game appears in the Applications menu as "Arrow Escape".
-A command `arrow-escape` is also added to ~/.local/bin.
+The game is designed to progressively challenge your logical thinking and problem-solving skills.
 
-Uninstall
----------
-  ~/.local/share/arrow-escape/uninstall.sh
+## Features
 
-If the window does not open
----------------------------
-Install the WebKitGTK engine (Ubuntu / Debian):
+* Brain-training puzzle gameplay
+* Arrow-based logic puzzles
+* Challenging levels
+* Daily challenge
+* Increasing difficulty
+* Simple and intuitive controls
+* Single-player gameplay
+* Lightweight Linux application
+* Windows version available
 
-  sudo apt update
-  sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0 gir1.2-webkit2-4.1
+## Platforms
 
-On older Ubuntu (20.04):
+* Linux
+* Ubuntu
+* Windows
 
-  sudo apt install python3-gi gir1.2-gtk-3.0 gir1.2-webkit2-4.0
+## Linux Installation
 
-The launcher will also use Google Chrome / Chromium / Brave in app mode
-if WebKitGTK is missing.
+### Debian / Ubuntu
 
-System package (.deb)
----------------------
-  sudo apt install ./arrow-escape_4.2.5_all.deb
+Download the latest `.deb` package from the official release page or itch.io.
 
-Remove with:
+Install it using:
 
-  sudo apt remove arrow-escape
+```bash
+sudo apt install ./arrow-escape_4.2.5_all.deb
+```
 
-Progress is stored in the browser/WebKit profile for this user.
+After installation, launch **Arrow Escape** from your applications menu.
+
+## Source Code
+
+This repository contains the source code and Linux application files for Arrow Escape.
+
+## Website
+
+Official website:
+
+https://arrow-puzzle.app
+
+## itch.io
+
+Play and download Arrow Escape:
+
+https://maniteja.itch.io/arrow-escape
+
+## Version
+
+Current version: **4.2.5**
+
+## Developer
+
+**Baniyamaniteja**
+
+## License
+
+Copyright © 2026 Baniyamaniteja.
+
+All rights reserved unless otherwise stated.
+
+The source code, game assets, graphics, puzzles, and other original content are proprietary to the developer. You may not redistribute, modify, or commercially use the game or its assets without permission.
+
+## Support
+
+For updates, downloads, and information about Arrow Escape, visit:
+
+https://arrow-puzzle.app
