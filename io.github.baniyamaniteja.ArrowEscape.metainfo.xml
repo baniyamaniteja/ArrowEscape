@@ -7,7 +7,7 @@
   <id>io.github.baniyamaniteja.ArrowEscape</id>
 
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LicenseRef-proprietary</project_license>
+  <project_license>LicenseRef-proprietary=https://arrow-puzzle.app/</project_license>
 
   <name>Arrow Escape</name>
   <summary>Brain logic arrow puzzle game</summary>
