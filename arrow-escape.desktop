@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=Arrow Escape
+GenericName=Puzzle Game
+Comment=Silhouette arrow-exit puzzle
+Exec=arrow-escape
+Icon=arrow-escape
+Terminal=false
+Categories=Game;LogicGame;PuzzleGame;
+Keywords=puzzle;arrow;daily;silhouette;
+StartupNotify=true
+StartupWMClass=Arrow Escape
