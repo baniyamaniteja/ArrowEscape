@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Arrow Escape
+GenericName=Puzzle Game
+Comment=Brain logic arrow puzzle game
+Exec=arrow-escape
+Icon=io.github.baniyamaniteja.ArrowEscape
+Terminal=false
+Type=Application
+Categories=Game;LogicGame;PuzzleGame;
+Keywords=arrow;puzzle;logic;brain;strategy;
+StartupNotify=true
