@@ -20,17 +20,24 @@ jobs:
           sudo apt-get clean
           sudo rm -rf /var/lib/apt/lists/*
           sudo apt-get update
-          sudo apt-get install -y flatpak flatpak-builder
+          sudo apt-get install -y flatpak flatpak-builder appstream
 
       - name: Add Flathub repository
         run: |
-          flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+          flatpak remote-add --user --if-not-exists flathub \
+            https://dl.flathub.org/repo/flathub.flatpakrepo
 
       - name: Install GNOME 50 Platform and SDK
         run: |
           flatpak install --user -y flathub \
             org.gnome.Platform//50 \
             org.gnome.Sdk//50
+
+      - name: Validate MetaInfo
+        run: |
+          echo "=== Validating AppStream MetaInfo ==="
+          appstreamcli validate --explain \
+            io.github.baniyamaniteja.ArrowEscape.metainfo.xml
 
       - name: Build Flatpak
         run: |
