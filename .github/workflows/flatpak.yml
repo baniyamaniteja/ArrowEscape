@@ -1,1 +1,39 @@
+name: Flatpak Build Test
 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  flatpak:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Flatpak tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y flatpak flatpak-builder
+
+      - name: Add Flathub repository
+        run: |
+          flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+      - name: Install GNOME 50 SDK
+        run: |
+          flatpak install -y flathub org.gnome.Sdk//50
+
+      - name: Build Flatpak
+        run: |
+          flatpak-builder --force-clean --disable-rofiles-fuse build io.github.baniyamaniteja.ArrowEscape.yml
+
+      - name: Build bundle
+        run: |
+          flatpak build-bundle \
+            flathub \
+            ArrowEscape.flatpak \
+            io.github.baniyamaniteja.ArrowEscape
