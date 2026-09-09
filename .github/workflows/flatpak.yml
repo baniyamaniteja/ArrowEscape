@@ -23,9 +23,11 @@ jobs:
         run: |
           flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-      - name: Install GNOME 50 SDK
+      - name: Install GNOME 50 Platform and SDK
         run: |
-          flatpak install --user -y flathub org.gnome.Sdk//50
+          flatpak install --user -y flathub \
+            org.gnome.Platform//50 \
+            org.gnome.Sdk//50
 
       - name: Build Flatpak
         run: |
