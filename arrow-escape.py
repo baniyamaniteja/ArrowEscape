@@ -103,7 +103,7 @@ def configure_settings(view, webkit) -> None:
         ("allow_file_access_from_file_urls", True),
         ("allow_universal_access_from_file_urls", False),
         ("enable_write_console_messages_to_stdout", False),
-        ("hardware_acceleration_policy", 1),
+        ("hardware_acceleration_policy", 2),
     )
 
     for name, value in settings_to_apply:
